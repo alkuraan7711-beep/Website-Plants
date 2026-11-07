@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fresh, healthy and easy-to-care-for indoor plants delivered right to your doorstep.">
+    <title>Verdant | Easy-care indoor plants</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%F0%9F%8C%BF%3C/text%3E%3C/svg%3E">
+
+    <!-- الخطوط: Fraunces للعناوين (شكلها عضوي ومناسب للنباتات) و DM Sans للنص العادي -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="plants.css">
+
+    <!-- بنضيف كلاس js بدري عشان أنيميشن الظهور يشتغل بس لو الجافاسكريبت شغال -->
+    <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+    <!-- ============================ الهيدر ============================ -->
+    <header class="site-header">
+        <nav class="navbar container" aria-label="Main navigation">
+            <a class="logo" href="#home">Verdant <span aria-hidden="true">🌿</span></a>
+
+            <ul class="links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#products">Shop</a></li>
+            </ul>
+
+            <div class="navbar-actions">
+                <button class="cart-button" type="button" id="cart-open" aria-label="Open cart, 0 items">
+                    <span aria-hidden="true">🛒</span>
+                    <span class="cart-count" id="cart-count" aria-hidden="true">0</span>
+                </button>
+                <a class="btn btn--primary navbar-cta" href="#products">Shop Now</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- ============================ Hero ============================ -->
+        <section class="hero-section" id="home">
+            <div class="hero-inner container">
+
+                <div class="hero-text">
+                    <h1 class="fade-up" style="--i:0">Embrace the green: nature at home</h1>
+                    <p class="fade-up" style="--i:1">Bring the beauty of nature indoors. Lush, healthy plants add vibrance and create a calming sanctuary in your living space. Discover the joy of potted plants and transform your home into a fresh, living haven.</p>
+                    <a class="btn btn--accent fade-up" style="--i:2" href="#products">Shop Now</a>
+                </div>
+
+                <div class="hero-image fade-up" style="--i:1">
+                    <img src="images/hero-plant.jpg" alt="Green leafy branch against a soft white background" width="900" height="1349" fetchpriority="high">
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ============================ الكروت (المميزات) ============================ -->
+        <section class="features container" id="about">
+
+            <article class="feature-card reveal" style="--i:0">
+                <div class="feature-icon" aria-hidden="true">🌱</div>
+                <h2>Easy Care</h2>
+                <p>Perfect for beginners and busy plant parents. These low-maintenance plants thrive with minimal watering and can adapt to various lighting conditions.</p>
+            </article>
+
+            <article class="feature-card reveal" style="--i:1">
+                <div class="feature-icon" aria-hidden="true">🚚</div>
+                <h2>Fast Delivery</h2>
+                <p>From our greenhouse directly to your doorstep. We pack every plant with ultimate care to ensure they arrive fresh, healthy, and ready to brighten your space.</p>
+            </article>
+
+            <article class="feature-card reveal" style="--i:2">
+                <div class="feature-icon" aria-hidden="true">💚</div>
+                <h2>Eco Friendly</h2>
+                <p>Loving nature means protecting it. Our plants are grown using sustainable methods, and we ship them in 100% biodegradable or recyclable materials.</p>
+            </article>
+
+        </section>
+
+        <!-- ============================ المنتجات ============================ -->
+        <section class="plant-products container" id="products">
+
+            <h2 class="section-title reveal">Shop our plants</h2>
+
+            <div class="products-grid">
+
+                <article class="product reveal" style="--i:0; --pos:30%" data-id="monstera" data-name="Monstera Deliciosa" data-price="45">
+                    <div class="product-media">
+                        <img src="images/monstera.jpg" alt="Monstera Deliciosa in a white pot beside a wooden cabinet" width="900" height="491" loading="lazy">
+                    </div>
+                    <div class="product-body">
+                        <h3>Monstera Deliciosa</h3>
+                        <span class="price">$45</span>
+                        <button class="btn btn--primary btn--block" type="button" data-add-to-cart>Add To Cart</button>
+                    </div>
+                </article>
+
+                <article class="product reveal" style="--i:1; --pos:60%" data-id="pilea" data-name="Pilea Peperomioides" data-price="25">
+                    <div class="product-media">
+                        <img src="images/pilea.jpg" alt="Pilea Peperomioides in a terracotta pot on a side table" width="900" height="491" loading="lazy">
+                    </div>
+                    <div class="product-body">
+                        <h3>Pilea Peperomioides</h3>
+                        <span class="price">$25</span>
+                        <button class="btn btn--primary btn--block" type="button" data-add-to-cart>Add To Cart</button>
+                    </div>
+                </article>
+
+                <article class="product reveal" style="--i:2; --pos:38%" data-id="fiddle-leaf-fig" data-name="Fiddle Leaf Fig" data-price="60">
+                    <div class="product-media">
+                        <img src="images/fiddle-leaf-fig.jpg" alt="Fiddle Leaf Fig in a terracotta pot next to an armchair" width="900" height="491" loading="lazy">
+                    </div>
+                    <div class="product-body">
+                        <h3>Fiddle Leaf Fig</h3>
+                        <span class="price">$60</span>
+                        <button class="btn btn--primary btn--block" type="button" data-add-to-cart>Add To Cart</button>
+                    </div>
+                </article>
+
+                <article class="product reveal" style="--i:3; --pos:62%" data-id="birds-nest-fern" data-name="Bird&#39;s Nest Fern" data-price="30">
+                    <div class="product-media">
+                        <img src="images/birds-nest-fern.jpg" alt="Bird's Nest Fern on a wooden stool by a window" width="900" height="491" loading="lazy">
+                    </div>
+                    <div class="product-body">
+                        <h3>Bird's Nest Fern</h3>
+                        <span class="price">$30</span>
+                        <button class="btn btn--primary btn--block" type="button" data-add-to-cart>Add To Cart</button>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- ============================ البانر ============================ -->
+        <section class="banner-section container">
+            <div class="banner-inner reveal">
+                <h2>Discover a curated collection of fresh, healthy, and easy-to-care-for indoor plants delivered right to your doorstep.</h2>
+                <a class="btn btn--light" href="#products">Explore Collection</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ============================ الفوتر ============================ -->
+    <footer class="site-footer">
+
+        <div class="footer-grid container">
+
+            <div class="footer-brand">
+                <a class="logo" href="#home">Verdant <span aria-hidden="true">🌿</span></a>
+                <p>Fresh, healthy, easy-to-care-for indoor plants delivered right to your doorstep.</p>
+            </div>
+
+            <div class="footer-col">
+                <h2>Shop</h2>
+                <ul>
+                    <li><a href="#products">Plants Collection</a></li>
+                    <li><a href="#about">Why Verdant</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h2>Contact</h2>
+                <ul>
+                    <li><a href="mailto:hello@verdant.example">hello@verdant.example</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h2>Social Media</h2>
+                <ul>
+                    <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li>
+                    <li><a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a></li>
+                    <li><a href="https://youtube.com" target="_blank" rel="noopener">Youtube</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            <p>© 2026 Verdant. All rights reserved.</p>
+        </div>
+
+    </footer>
+
+    <!-- ============================ السلة ============================ -->
+    <dialog class="cart-dialog" id="cart-dialog" aria-labelledby="cart-title">
+        <div class="cart-dialog__inner">
+            <div class="cart-dialog__header">
+                <h2 id="cart-title">Your cart</h2>
+                <button class="cart-close" type="button" aria-label="Close cart" data-cart-close>&times;</button>
+            </div>
+
+            <p class="cart-empty" id="cart-empty">Your cart is empty. Add a plant to get started.</p>
+            <ul class="cart-list" id="cart-list"></ul>
+
+            <div class="cart-footer" id="cart-footer" hidden>
+                <p class="cart-total"><span>Total</span> <strong id="cart-total">$0</strong></p>
+                <a class="btn btn--accent btn--block" id="cart-order" href="#" target="_blank" rel="noopener" hidden>Order on WhatsApp</a>
+                <button class="btn-text" type="button" id="cart-clear">Clear cart</button>
+            </div>
+        </div>
+    </dialog>
+
+    <p class="sr-only" id="cart-status" role="status" aria-live="polite"></p>
+
+    <script src="plants.js" defer></script>
+</body>
+</html>
